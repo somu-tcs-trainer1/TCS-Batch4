@@ -32,15 +32,15 @@ public class ToolTipAndExtractValueTest : PageTest
         await Page.GotoAsync("https://www.bing.com/");
         await Page.WaitForTimeoutAsync(3000);
 
-        ILocator element = Page.Locator("#sb_form_q");
+        ILocator? element = Page.Locator("#sb_form_q");
 
         string txtToEnter = "mango";
         await element.FillAsync(txtToEnter);
         await element.PressAsync("Tab");
         await Page.WaitForTimeoutAsync(2000);
 
-        Task<string> valueFromElement = element.GetAttributeAsync("value");
-        string txtvalueFromElement = valueFromElement.Result;
+        Task<string?> valueFromElement = element.GetAttributeAsync("value");
+        string? txtvalueFromElement = valueFromElement.Result;
         Console.WriteLine("The value attribute text extracted: "+valueFromElement.Result);
         //Assert.Equals(txtToEnter, valueFromElement);
         Assert.That(txtvalueFromElement, Is.EqualTo(txtToEnter));

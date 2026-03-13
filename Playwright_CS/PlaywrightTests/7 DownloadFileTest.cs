@@ -13,7 +13,7 @@ public class DownloadFileTest : PageTest
     [Test]
     public async Task FileDownloadTest()
     {
-        Console.WriteLine("Executing FormFillTest");
+        Console.WriteLine("Executing FileDownloadTest");
         await Page.GotoAsync("https://www.microsoft.com/en-in/microsoft-teams/download-app");
 
         ILocator downloadElement = Page.GetByRole(AriaRole.Link, new() {Name = "Download Microsoft Teams for Windows"});

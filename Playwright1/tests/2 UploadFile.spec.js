@@ -1,6 +1,6 @@
-import {test, expect} from '@playwright/test'
+import { test, expect } from '@playwright/test'
 
-test('upload file test', async ({page}) => {
+test('upload file test', async ({ page }) => {
     await page.goto("https://testautomationpractice.blogspot.com/");
     console.log("Page opened successfully");
 
@@ -13,7 +13,7 @@ test('upload file test', async ({page}) => {
     await uploadFileElement1.setInputFiles("C:\\Users\\Lenovo\\OneDrive\\Desktop\\TCS Latest\\Task Class in CSharp.docx");
     await page.getByText("Upload Single File").click();
     await page.waitForTimeout(2000);
-    
+
     //MULTIPLE FILE UPLOAD
     const file1 = "C:\\Users\\Lenovo\\OneDrive\\Desktop\\TCS Latest\\Class Notes\\Day 3.txt";
     const file2 = "C:\\Users\\Lenovo\\OneDrive\\Desktop\\TCS Latest\\Class Notes\\Day 5.txt";

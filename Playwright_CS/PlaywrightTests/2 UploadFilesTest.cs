@@ -17,21 +17,24 @@ public class UploadFilesTest : PageTest
 
         await Page.GotoAsync("https://testautomationpractice.blogspot.com/");
 
-    // var uploadFileElement1 = Page.Locator("//input[@id='singleFileInput']");
-    // await uploadFileElement1.scrollIntoViewIfNeeded();
-    string file1 = "C:\\Users\\Lenovo\\OneDrive\\Desktop\\TCS Latest\\Class Notes\\Day 3.txt";
+        // var uploadFileElement1 = Page.Locator("//input[@id='singleFileInput']");
+        // await uploadFileElement1.scrollIntoViewIfNeeded();
+        string file1 = "C:\\Users\\Lenovo\\OneDrive\\Desktop\\TCS Latest\\Class Notes\\Day 3.txt";
 
-    await Page.Locator("//input[@id='singleFileInput']").SetInputFilesAsync(file1);
-    await Page.GetByText("Upload Single File").ClickAsync();
-    await Page.WaitForTimeoutAsync(3000);
-    
-    //MULTIPLE FILE UPLOAD
-    string file2 = "C:\\Users\\Lenovo\\OneDrive\\Desktop\\TCS Latest\\Class Notes\\Day 5.txt";
-    string file3 = "C:\\Users\\Lenovo\\OneDrive\\Desktop\\TCS Latest\\Class Notes\\Day 6.txt";
+        ILocator fileUploadElement1 = Page.Locator("//input[@id='singleFileInput']");
 
-    await Page.Locator("//input[@id='multipleFilesInput']").SetInputFilesAsync([file1, file2, file3]);
-    await Page.GetByText("Upload Multiple Files").ClickAsync();
-    await Page.WaitForTimeoutAsync(3000);
+        await fileUploadElement1.SetInputFilesAsync(file1);
+        //await Page.Locator("//input[@id='singleFileInput']").SetInputFilesAsync(file1);
+        await Page.GetByText("Upload Single File").ClickAsync();
+        await Page.WaitForTimeoutAsync(3000);
+
+        //MULTIPLE FILE UPLOAD
+        string file2 = "C:\\Users\\Lenovo\\OneDrive\\Desktop\\TCS Latest\\Class Notes\\Day 5.txt";
+        string file3 = "C:\\Users\\Lenovo\\OneDrive\\Desktop\\TCS Latest\\Class Notes\\Day 6.txt";
+
+        await Page.Locator("//input[@id='multipleFilesInput']").SetInputFilesAsync([file1, file2, file3]);
+        await Page.GetByText("Upload Multiple Files").ClickAsync();
+        await Page.WaitForTimeoutAsync(3000);
 
     }
 }

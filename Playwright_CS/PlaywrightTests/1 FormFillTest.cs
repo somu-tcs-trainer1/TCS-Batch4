@@ -17,21 +17,21 @@ public class FormFillTest : PageTest
 
         await Page.GotoAsync("https://testautomationpractice.blogspot.com/");
 
-    await Page.GetByPlaceholder("Enter Name").FillAsync("Sample Name");
+        await Page.GetByPlaceholder("Enter Name").FillAsync("Sample Name");
 
-    await Page.Locator("#email").FillAsync("sample_email@example.com");
+        await Page.Locator("#email").FillAsync("sample_email@example.com");
 
-    await Page.GetByRole(AriaRole.Textbox, new() {Name = "Phone"}).FillAsync("1234567890");
+        await Page.GetByRole(AriaRole.Textbox, new() { Name = "Phone" }).FillAsync("1234567890");
 
-    await Page.GetByRole(AriaRole.Textbox, new() {Name = "Address"}).FillAsync("4th Street, First Down, Umbrella Avenue, RajNagar");
+        await Page.GetByRole(AriaRole.Textbox, new() { Name = "Address" }).FillAsync("4th Street, First Down, Umbrella Avenue, RajNagar");
 
-    await Page.GetByLabel("Female").CheckAsync();
-    await Page.GetByLabel("Tuesday").CheckAsync();
-    await Page.GetByLabel("Wednesday").CheckAsync();
+        await Page.GetByLabel("Female").CheckAsync();
+        await Page.GetByLabel("Tuesday").CheckAsync();
+        await Page.GetByLabel("Wednesday").CheckAsync();
 
-    await Page.Locator("#country").SelectOptionAsync("India");
+        await Page.Locator("#country").SelectOptionAsync("India");
 
-    await Page.WaitForTimeoutAsync(3000);
+        await Page.WaitForTimeoutAsync(3000);
 
         // Expect a title "to contain" a substring.
         // await Expect(Page).ToHaveTitleAsync(new Regex("Playwright"));
