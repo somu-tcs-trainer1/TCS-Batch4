@@ -52,7 +52,7 @@ public class ParamterizingTest : PageTest
     [Test]
     public async Task ParamertizeCsvData()
     {
-        Console.WriteLine("Executing ParamertizeJsonData");
+        Console.WriteLine("Executing ParamertizeCsvData");
         await Page.GotoAsync("https://testautomationpractice.blogspot.com/");
 
         ILocator Name = Page.GetByPlaceholder("Enter Name");
@@ -79,7 +79,6 @@ public class ParamterizingTest : PageTest
             }
         }
     }
-
 }
 
 public class TestDataItem
