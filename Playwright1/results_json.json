@@ -1,0 +1,203 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Class Programs\\Playwright1\\playwright.config.js",
+    "rootDir": "C:/Users/Lenovo/OneDrive/Desktop/Class Programs/Playwright1/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Lenovo/OneDrive/Desktop/Class Programs/Playwright1/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Lenovo/OneDrive/Desktop/Class Programs/Playwright1/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results_json.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "11 PopUpHandling.spec.js",
+      "file": "11 PopUpHandling.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Handling pop-up with accept",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14272,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Page opened successfully\n"
+                    },
+                    {
+                      "text": "The message inside the dialog box is:  Press a button!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-03-19T06:26:14.448Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2d27ca31192fa9d193e5-b75a1e911353397b546b",
+          "file": "11 PopUpHandling.spec.js",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Handling pop-up with dismiss",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 15243,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Page opened successfully\n"
+                    },
+                    {
+                      "text": "The message inside the dialog box is:  Press a button!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-03-19T06:26:14.375Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2d27ca31192fa9d193e5-68dd68d1e83884d4d2d8",
+          "file": "11 PopUpHandling.spec.js",
+          "line": 23,
+          "column": 5
+        },
+        {
+          "title": "Handling pop-up with prompt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13615,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Page opened successfully\n"
+                    },
+                    {
+                      "text": "Dialog message: Please enter your name:\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-03-19T06:26:29.233Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2d27ca31192fa9d193e5-a9cc02678a18a591d843",
+          "file": "11 PopUpHandling.spec.js",
+          "line": 43,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-03-19T06:26:09.738Z",
+    "duration": 33318.838,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

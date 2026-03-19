@@ -1,0 +1,25 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="32.92953000000001">
+<testsuite name="11 PopUpHandling.spec.js" timestamp="2026-03-19T06:22:56.172Z" hostname="chromium" tests="3" failures="0" skipped="0" time="43.475" errors="0">
+<testcase name="Handling pop-up with accept" classname="11 PopUpHandling.spec.js" time="14.256">
+<system-out>
+<![CDATA[Page opened successfully
+The message inside the dialog box is:  Press a button!
+]]>
+</system-out>
+</testcase>
+<testcase name="Handling pop-up with dismiss" classname="11 PopUpHandling.spec.js" time="15.711">
+<system-out>
+<![CDATA[Page opened successfully
+The message inside the dialog box is:  Press a button!
+]]>
+</system-out>
+</testcase>
+<testcase name="Handling pop-up with prompt" classname="11 PopUpHandling.spec.js" time="13.508">
+<system-out>
+<![CDATA[Page opened successfully
+Dialog message: Please enter your name:
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
