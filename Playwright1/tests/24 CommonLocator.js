@@ -22,6 +22,8 @@ export class RegisterPage{
 
     async printMultipleCommonLocator(){
         console.log(this.commonLocatorString("MyID", 3, 1));
+        // let x = "abc";
+        // x.t
     }
 }
 

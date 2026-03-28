@@ -1,8 +1,7 @@
-import { test, expect } from '@playwright/test'
-
-// test.beforeEach()
+import { test } from '@playwright/test';
 
 test('fill the form', async ({ page }) => {
+    // test.setTimeout()
     await page.goto("https://testautomationpractice.blogspot.com/");
     console.log("Page opened successfully");
 
