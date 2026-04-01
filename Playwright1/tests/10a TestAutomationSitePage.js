@@ -3,9 +3,9 @@ export class AutomationSitePage{
     
     constructor(page){
         this.page = page;
-        this.nameTxtbox = page.getByPlaceholder("Enter Name");
-        this.emailTxtbox = page.locator("#email");
-        this.phoneTxtbox = page.getByRole("textbox", { name: 'Phone' });
+        this.nameTxtbox = this.page.getByPlaceholder("Enter Name");
+        this.emailTxtbox = this.page.locator("#email");
+        this.phoneTxtbox = this.page.getByRole("textbox", { name: 'Phone' });
     }
 
     async launch(){

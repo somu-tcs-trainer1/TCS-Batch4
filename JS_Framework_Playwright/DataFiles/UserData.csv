@@ -1,0 +1,4 @@
+FirstName,LastName,Email,Password,ConfirmPassword,Gender
+Amrutha,Thakur,amruthathakur@example.com,Password@123,Password@123,female
+Sagar,Chavla,sagarchavla@example.com,Password@123,Password@123,male
+Ravindra,Jain,ravindrajain@example.com,Password@123,Password@123,male

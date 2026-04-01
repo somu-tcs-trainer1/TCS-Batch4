@@ -1,6 +1,7 @@
 export class RegisterPage{
     constructor(page){
         this.page = page;
+        this.commonLocator = (id) => page.locator(`input#${id}`);
         this.gender_male_RadioBtn = page.locator("input#gender-male")
         this.gender_female_RadioBtn = page.locator("input#gender-female");
         this.firstNameTxtBox = page.locator("input#FirstName");
@@ -8,7 +9,8 @@ export class RegisterPage{
         this.emailTxtBox = page.locator("input#Email");
         this.passwordTxtBox = page.locator("input#Password");
         this.confirmPasswordTxtBox = page.locator("input#ConfirmPassword");
-        this.registerBtn = page.locator("input#register-button");
+        this.registerBtn = this.commonLocator("register-button"); 
+        //this.registerBtn = page.locator("input#register-button");
     }
 
     async fillRegisterForm(fname, lname, email, pswd, gender){
@@ -29,7 +31,7 @@ export class RegisterPage{
         await this.confirmPasswordTxtBox.clear();
         await this.confirmPasswordTxtBox.fill(pswd);
         await this.page.waitForTimeout(2000);
-        await this.registerBtn.click();
+        //await this.registerBtn.click();
         //await this.page.waitForTimeout(2000);
     }
 }

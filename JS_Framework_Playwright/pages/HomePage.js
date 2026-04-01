@@ -1,6 +1,133 @@
-class HomePage{
-    constructor(page){
-        this.page = page;
+// class HomePage{
+//     constructor(page){
+//         this.page = page;
         
-    }
-}
+//     }
+// }
+
+import { expect, test } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://demowebshop.tricentis.com/');
+  await page.getByRole('link', { name: 'Log in' }).click();
+  await page.getByRole('textbox', { name: 'Email:' }).click();
+  await page.getByRole('textbox', { name: 'Email:' }).fill('shekhar_user4@example.com');
+  await page.getByRole('textbox', { name: 'Password:' }).click();
+  await page.getByRole('textbox', { name: 'Password:' }).fill('Password@123');
+  await page.getByRole('checkbox', { name: 'Remember me?' }).check();
+  await page.getByRole('button', { name: 'Log in' }).click();
+  await page.getByRole('listitem').filter({ hasText: 'Books' }).nth(2).click();
+  await page.getByRole('link', { name: 'Books' }).nth(1).click();
+  await page.getByRole('link', { name: 'Computers' }).nth(1).click();
+  await page.getByRole('link', { name: 'Electronics' }).nth(1).click();
+  await page.getByRole('link', { name: 'Apparel & Shoes' }).nth(1).click();
+  await page.getByRole('link', { name: 'Digital downloads' }).nth(1).click();
+  await page.getByRole('link', { name: 'Jewelry' }).nth(1).click();
+  await page.getByRole('link', { name: 'Gift Cards' }).nth(1).click();
+  await page.getByRole('link', { name: 'Books' }).first().click();
+  await page.getByRole('link', { name: 'Computers' }).first().click();
+  await page.getByRole('link', { name: 'Electronics' }).first().click();
+  await page.getByRole('link', { name: 'Apparel & Shoes' }).first().click();
+  await page.getByRole('link', { name: 'Jewelry' }).first().click();
+  await page.getByRole('link', { name: 'Desktops' }).click();
+  await page.getByRole('link', { name: 'Picture of Elite Desktop PC' }).click();
+  await page.getByRole('listitem').filter({ hasText: 'Electronics' }).nth(1).click();
+  await page.getByRole('listitem').filter({ hasText: 'Electronics' }).nth(1).click();
+  await page.getByRole('link', { name: 'Electronics' }).nth(1).click();
+  await page.getByRole('link', { name: 'Picture for category Cell' }).click();
+  await page.getByRole('button', { name: 'Add to cart' }).first().click();
+  await expect(page.getByText('The product has been added to')).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Shopping cart (1)' })).toBeVisible();
+  await page.getByRole('link', { name: 'Shopping cart (1)' }).click();
+  await expect(page.getByRole('link', { name: 'Smartphone' })).toBeVisible();
+  await expect(page.locator('body')).toContainText('Smartphone');
+  await expect(page.getByText('Price: 100.00', { exact: true })).toBeVisible();
+  await page.getByText('100.00').nth(3).click();
+  await expect(page.locator('input[name="itemquantity6491931"]')).toBeVisible();
+  await page.getByRole('button', { name: 'Update shopping cart' }).click();
+  await page.getByRole('button', { name: 'Continue shopping' }).click();
+  await page.getByRole('link', { name: 'Shopping cart (1)' }).click();
+  await page.locator('input[name="discountcouponcode"]').click();
+  await page.getByRole('button', { name: 'Apply coupon' }).click();
+  await expect(page.locator('body')).toContainText('The coupon code you entered couldn\'t be applied to your order');
+  await expect(page.getByRole('strong').filter({ hasText: 'Gift Cards' })).toBeVisible();
+  await expect(page.getByText('Enter gift card code')).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Add gift card' })).toBeVisible();
+  await page.locator('input[name="giftcardcouponcode"]').click();
+  await page.getByRole('button', { name: 'Add gift card' }).click();
+  await expect(page.locator('body')).toContainText('The coupon code you entered couldn\'t be applied to your order');
+  await expect(page.getByText('Enter your destination to get')).toBeVisible();
+  await page.getByRole('textbox', { name: 'Zip / postal code:' }).click();
+  await page.getByRole('textbox', { name: 'Zip / postal code:' }).fill('10005');
+  await page.getByRole('button', { name: 'Estimate shipping' }).click();
+  await expect(page.getByText('Ground (0.00)')).toBeVisible();
+  await expect(page.getByText('Next Day Air (0.00)')).toBeVisible();
+  await expect(page.getByText('2nd Day Air (0.00)')).toBeVisible();
+  await expect(page.getByText('In-Store Pickup (0.00)')).toBeVisible();
+  await expect(page.locator('body')).toContainText('Sub-Total:');
+  await expect(page.locator('body')).toContainText('100.00');
+  await expect(page.locator('body')).toContainText('Total:');
+  await expect(page.locator('body')).toContainText('100.00');
+  await expect(page.getByText('I agree with the terms of')).toBeVisible();
+  await page.locator('#termsofservice').check();
+  await page.getByRole('button', { name: 'Checkout' }).click();
+  await expect(page.locator('#opc-billing').getByText('1', { exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Billing address' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Checkout' })).toBeVisible();
+  await expect(page.locator('#checkout-billing-load')).toContainText('Select a billing address from your address book or enter a new address.');
+  await page.getByRole('button', { name: 'Continue' }).click();
+  await expect(page.getByRole('link', { name: 'Back' })).toBeVisible();
+  await page.getByRole('button', { name: 'Continue' }).click();
+  await expect(page.getByText('3 Shipping method')).toBeVisible();
+  await expect(page.getByText('Ground (0.00)')).toBeVisible();
+  await expect(page.getByText('Next Day Air (0.00)')).toBeVisible();
+  await expect(page.getByText('2nd Day Air (0.00)')).toBeVisible();
+  await page.getByRole('button', { name: 'Continue' }).click();
+  await expect(page.getByText('4', { exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Payment method' })).toBeVisible();
+  await expect(page.getByText('Cash On Delivery (COD) (7.00)')).toBeVisible();
+  await expect(page.getByText('Check / Money Order (5.00)')).toBeVisible();
+  await expect(page.getByText('Credit Card')).toBeVisible();
+  await expect(page.getByText('Purchase Order')).toBeVisible();
+  await page.getByRole('button', { name: 'Continue' }).click();
+  await expect(page.getByRole('heading', { name: 'Payment information' })).toBeVisible();
+  await expect(page.getByText('You will pay by COD')).toBeVisible();
+  await expect(page.getByRole('cell')).toContainText('You will pay by COD');
+  await page.getByRole('button', { name: 'Continue' }).click();
+  await expect(page.getByText('Billing Address', { exact: true })).toBeVisible();
+  await expect(page.getByText('Shipping Address', { exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Confirm order' })).toBeVisible();
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('fnameUser4 lnameUser4');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('Email: shekhar_user4@example.com');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('Phone: 1234567890');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('Payment Method');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('Cash On Delivery (COD)');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('Shipping Address');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('fnameUser4 lnameUser4');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('Email: shekhar_user4@example.com');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('Phone: 1234567890');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('Shipping Method');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('Ground');
+  await expect(page.locator('thead')).toContainText('Product(s)');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('100.00');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('1');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('Total: 100.00');
+  await expect(page.getByRole('cell', { name: 'Sub-Total:' })).toBeVisible();
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('100.00');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('Total:');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('107.00');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('Payment method additional fee:');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('Payment method additional fee:');
+  await expect(page.locator('#checkout-confirm-order-load')).toContainText('7.00');
+  await page.getByRole('button', { name: 'Confirm' }).click();
+  await expect(page.getByRole('strong')).toContainText('Your order has been successfully processed!');
+  await expect(page.locator('h1')).toContainText('Thank you');
+  await expect(page.locator('body')).toContainText('Order number: 2259995');
+  await expect(page.getByRole('button', { name: 'Continue' })).toBeVisible();
+  await expect(page.locator('body')).toContainText('Click here for order details.');
+  await expect(page.getByRole('button', { name: 'Continue' })).toBeVisible();
+  await page.getByRole('button', { name: 'Continue' }).click();
+  await page.getByRole('link', { name: 'Log out' }).click();
+  await expect(page.getByRole('link', { name: 'Log in' })).toBeVisible();
+  await expect(page.locator('#topcartlink')).toContainText('Shopping cart');
+});

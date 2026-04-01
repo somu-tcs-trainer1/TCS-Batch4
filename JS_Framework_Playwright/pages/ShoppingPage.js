@@ -2,17 +2,11 @@ export class LoginPage{
     constructor(page){
         this.page = page;
         this.commonLocator = (id) => page.locator(`input#${id}`);
-        this.emailTxtBox = this.commonLocator("Email"); 
-        this.passwordTxtBox = this.commonLocator("Password");
         //this.emailTxtBox = page.locator("input#Email");
-        // this.passwordTxtBox = page.locator("input#Password");
-        this.loginBtn = page.locator("//input[@value='Log in']");         
+        // this.passwordTxtBox = page.locator("input#Password");  
     }
 
-    // async gotoLoginPage(){
-
-    // }
-    async loginUser(email, pswd){
+    async searchForProduct(productName){
         if((email != null || email != undefined) && (pswd != null || pswd != undefined)){
         await this.emailTxtBox.clear();
         await this.emailTxtBox.fill(email);

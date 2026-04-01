@@ -23,35 +23,25 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['html'], ['allure-playwright', { resultsDir: "allure-results" }]],
+  reporter: [ ['html'], ['dot'] ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
-    baseURL: process.env.E2E_BASE_URL,
-    // headless: false,
+    baseURL: process.env.PRD_BASE_URL,
+    headless: false,
     // browserName: 'chromium',
-    // channel: 'chrome',
+    // channel: 'chrome'
     // video: ''
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    //viewport: {width: 1920, height: 1080}
+    viewport: {width: 1920, height: 1080}
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: {
-        ...devices['Desktop Chrome'],
-        // 1. Disable the fixed viewport to allow maximization
-        viewport: null,
-        // 2. Clear scale factor to avoid conflicts with null viewport
-        deviceScaleFactor: undefined,
-        launchOptions: {
-          // 3. Command to start the window maximized
-          args: ['--start-maximized']
-        },
-      },
+      use: { ...devices['Desktop Chrome'] },
     },
 
     // {
