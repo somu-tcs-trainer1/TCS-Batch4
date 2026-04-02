@@ -527,3 +527,12 @@ C:\Users\Lenovo\OneDrive\Desktop\Class Programs\Playwright_CS\PlaywrightTests\ob
 C:\Users\Lenovo\OneDrive\Desktop\Class Programs\Playwright_CS\PlaywrightTests\obj\Debug\net10.0\PlaywrightTests.pdb
 C:\Users\Lenovo\OneDrive\Desktop\Class Programs\Playwright_CS\PlaywrightTests\obj\Debug\net10.0\PlaywrightTests.genruntimeconfig.cache
 C:\Users\Lenovo\OneDrive\Desktop\Class Programs\Playwright_CS\PlaywrightTests\obj\Debug\net10.0\ref\PlaywrightTests.dll
+C:\Users\Lenovo\OneDrive\Desktop\My JS CS\TCS-Batch4\Playwright_CS\PlaywrightTests\obj\Debug\net10.0\PlaywrightTests.csproj.AssemblyReference.cache
+C:\Users\Lenovo\OneDrive\Desktop\My JS CS\TCS-Batch4\Playwright_CS\PlaywrightTests\obj\Debug\net10.0\PlaywrightTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\OneDrive\Desktop\My JS CS\TCS-Batch4\Playwright_CS\PlaywrightTests\obj\Debug\net10.0\PlaywrightTests.AssemblyInfoInputs.cache
+C:\Users\Lenovo\OneDrive\Desktop\My JS CS\TCS-Batch4\Playwright_CS\PlaywrightTests\obj\Debug\net10.0\PlaywrightTests.AssemblyInfo.cs
+C:\Users\Lenovo\OneDrive\Desktop\My JS CS\TCS-Batch4\Playwright_CS\PlaywrightTests\obj\Debug\net10.0\PlaywrightTests.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\OneDrive\Desktop\My JS CS\TCS-Batch4\Playwright_CS\PlaywrightTests\obj\Debug\net10.0\PlaywrightTests.sourcelink.json
+C:\Users\Lenovo\OneDrive\Desktop\My JS CS\TCS-Batch4\Playwright_CS\PlaywrightTests\obj\Debug\net10.0\PlaywrightTests.dll
+C:\Users\Lenovo\OneDrive\Desktop\My JS CS\TCS-Batch4\Playwright_CS\PlaywrightTests\obj\Debug\net10.0\refint\PlaywrightTests.dll
+C:\Users\Lenovo\OneDrive\Desktop\My JS CS\TCS-Batch4\Playwright_CS\PlaywrightTests\obj\Debug\net10.0\PlaywrightTests.pdb

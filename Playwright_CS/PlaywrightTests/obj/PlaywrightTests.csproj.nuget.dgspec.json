@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Class Programs\\Playwright_CS\\PlaywrightTests\\PlaywrightTests.csproj": {}
+    "C:\\Users\\Lenovo\\OneDrive\\Desktop\\My JS CS\\TCS-Batch4\\Playwright_CS\\PlaywrightTests\\PlaywrightTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Class Programs\\Playwright_CS\\PlaywrightTests\\PlaywrightTests.csproj": {
+    "C:\\Users\\Lenovo\\OneDrive\\Desktop\\My JS CS\\TCS-Batch4\\Playwright_CS\\PlaywrightTests\\PlaywrightTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Class Programs\\Playwright_CS\\PlaywrightTests\\PlaywrightTests.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\My JS CS\\TCS-Batch4\\Playwright_CS\\PlaywrightTests\\PlaywrightTests.csproj",
         "projectName": "PlaywrightTests",
-        "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Class Programs\\Playwright_CS\\PlaywrightTests\\PlaywrightTests.csproj",
+        "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\My JS CS\\TCS-Batch4\\Playwright_CS\\PlaywrightTests\\PlaywrightTests.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Class Programs\\Playwright_CS\\PlaywrightTests\\obj\\",
+        "outputPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\My JS CS\\TCS-Batch4\\Playwright_CS\\PlaywrightTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,10 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[33.1.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.14.0, )"
@@ -74,6 +78,10 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
+            },
             "coverlet.collector": {
               "target": "Package",
               "version": "[6.0.4, )"
@@ -95,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.104/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

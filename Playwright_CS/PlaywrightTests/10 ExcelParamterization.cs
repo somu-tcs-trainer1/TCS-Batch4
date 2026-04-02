@@ -31,7 +31,7 @@ public class ExcelReader
                 {
                     string? key = headerRow.GetCell(j).ToString();
                     string? value = row.GetCell(j).ToString();
-                    rowData[key] = value;
+                    rowData[key!] = value!;
                 }
                 dataList.Add(rowData);
             }

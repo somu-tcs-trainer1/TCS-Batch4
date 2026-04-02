@@ -1,0 +1,12 @@
+[
+  {
+    "Name": "ExampleDomain",
+    "Url": "https://example.com",
+    "ExpectedHeader": "Example Domain"
+  },
+  {
+    "Name": "PlaywrightHome",
+    "Url": "https://playwright.dev",
+    "ExpectedHeader": "Playwright enables reliable end-to-end testing for modern web apps."
+  }
+]

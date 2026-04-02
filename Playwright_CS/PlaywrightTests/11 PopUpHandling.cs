@@ -76,10 +76,10 @@ public class DialogTests : PageTest
                 await dialog.AcceptAsync();
             }
             // Unsubscribe to mimic JS 'once'
-            Page.Dialog -= HandlePrompt;
+            Page.Dialog -= HandlePrompt!;
         }
 
-        Page.Dialog += HandlePrompt;
+        Page.Dialog += HandlePrompt!;
 
         await Page.GetByText("Prompt Alert").ClickAsync();
         await Task.Delay(2000);

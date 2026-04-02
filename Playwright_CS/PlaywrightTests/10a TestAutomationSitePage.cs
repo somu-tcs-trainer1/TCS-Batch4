@@ -24,11 +24,11 @@ public class AutomationSitePage
 
     public async Task FillBasicForm(String name, String email, String phone)
     {
-        await _nameTxtbox.ClearAsync();
+        await _nameTxtbox!.ClearAsync();
         await _nameTxtbox.FillAsync(name);
-        await _emailTxtbox.ClearAsync();
+        await _emailTxtbox!.ClearAsync();
         await _emailTxtbox.FillAsync(email);
-        await _phoneTxtbox.ClearAsync();
+        await _phoneTxtbox!.ClearAsync();
         await _phoneTxtbox.FillAsync(phone);        
     }
 }
