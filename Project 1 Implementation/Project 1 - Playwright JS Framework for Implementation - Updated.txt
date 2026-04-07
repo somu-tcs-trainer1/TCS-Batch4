@@ -1,0 +1,25 @@
+PROJECT 1 – Playwright with JavaScript Implementation and Execution
+TEST SCENARIOS, END TO END SCENARIO FOR FRAMEWORK CREATION AND TESTING - application - https://www.demoblaze.com/ 
+A. Create page classes for all menu pages
+B. Create Common Methods class for user actions
+C. Create Utilities (classes / methods) for reading Excel, CSV and JSON files. Create a folder "data files" where all data read into the utilities will have to have to be saved
+D. Configure Allure Reports for execution results
+E. Read the baseURL from config file and credentials from .env file
+F. Create multiple config files with configuration changes on retries, timeouts, url launch options, etc.,
+G. Create the below tests:
+	a. sign up to the site and validate the user is able to sign up with valid details
+	b. Login to the site and validate the user is able to login for valid credentials and unable to with invalid credentials
+	c. Create multiple users, store the details in an excel, csv, json. Read any of these files and verify all the users are able to login.
+	d. Create a test to store multiple elements to search in excel, csv, json. Search the items extracted from the file in the demo blaze site. Verify some of 	the items are available in the site for buying and some are not
+	e. Search for few items and Add the items to the cart. Validate you are able to add the items to the cart.
+	f. Search for few items and Add the items to the cart. Delete few items from the cart. Validate you are able to delete the items from the cart.
+	g. End to end scenario for test design and execution is below: 
+		i. sign up
+		ii. login
+		iii. search / select an item (at least 2 items)
+		iv. add the items to the cart
+		v. Go to the cart, delete one item
+		vi. Check for the total is matching when you add individual items price
+		vii. Click place order and fill the details for purchasing
+		viii. Continue with purchase and verify the message that appears after the purchase
+		ix.Log out
