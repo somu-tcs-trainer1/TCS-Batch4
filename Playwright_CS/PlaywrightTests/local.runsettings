@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <Playwright>
+    <!-- Standard Playwright Options -->
+    <BrowserName>chromium</BrowserName>
+    <LaunchOptions>
+      <Headless>false</Headless>
+      <Args>["--start-maximized"]</Args>
+      <Channel>msedge</Channel>
+      <SlowMo>100</SlowMo>
+    </LaunchOptions>
+
+  </Playwright>
+
+  <TestRunParameters>
+    <!-- Custom Application Settings -->
+    <Parameter name="BaseUrl" value="https://testautomationpractice.blogspot.com/" />
+    <Parameter name="PageTitle" value="Automation Testing Practice" />
+    <Parameter name="Name" value="Rajesh Khanna" />
+    <Parameter name="Email" value="rajeshkhanna@example.com" />
+    <Parameter name="Phone" value="1234567890" />
+    <Parameter name="TakeScreenshotOnFailure" value="true" />
+    <Parameter name="Timeout" value="30000" />
+  </TestRunParameters>
+</RunSettings>
